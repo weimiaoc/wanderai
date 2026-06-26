@@ -150,7 +150,7 @@ function PlannerContent() {
   const router = useRouter();
   const resultsRef = useRef<HTMLDivElement>(null);
 
-  const [preferences, setPreferences] = useState<TravelPreferences>({ departureCity: "上海", budget: 5000, days: 2, travelers: 1, interests: [], pace: "balanced", travelStyle: "classic" });
+  const [preferences, setPreferences] = useState<TravelPreferences>({ departureCity: "上海", budget: 3000, days: 5, travelers: 1, interests: [], pace: "balanced", travelStyle: "classic" });
   const [generated, setGenerated] = useState(false);
   const [results, setResults] = useState<Destination[]>([]);
   const [selectedDest, setSelectedDest] = useState<Destination | null>(null);

@@ -507,7 +507,7 @@ export const travelStyles = [
 ];
 
 export const demoPreset: TravelPreferences = {
-  departureCity: "上海", budget: 5000, days: 2, travelers: 1,
+  departureCity: "上海", budget: 3000, days: 5, travelers: 1,
   interests: ["咖啡馆", "摄影", "City Walk"], pace: "balanced",
   travelStyle: "classic",
 };
