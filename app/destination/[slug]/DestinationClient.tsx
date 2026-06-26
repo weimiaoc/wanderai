@@ -233,10 +233,10 @@ export default function DestinationClient({ slug, dest, extras }: { slug: string
                 </div>
                 <p className="text-sm text-[var(--color-text-secondary)]">人均预算 {dest.avgBudget}，包含住宿、餐饮、门票等基本开销。</p>
                 <div className="mt-3 space-y-1.5 text-xs text-[var(--color-text-secondary)]">
-                  <div className="flex justify-between"><span>住宿</span><span className="font-medium">¥150-400/晚</span></div>
-                  <div className="flex justify-between"><span>餐饮</span><span className="font-medium">¥80-150/天</span></div>
+                  <div className="flex justify-between"><span>住宿</span><span className="font-medium">¥200-600/晚</span></div>
+                  <div className="flex justify-between"><span>餐饮</span><span className="font-medium">¥100-200/天</span></div>
                   <div className="flex justify-between"><span>交通</span><span className="font-medium">¥50-100/天</span></div>
-                  <div className="flex justify-between"><span>门票</span><span className="font-medium">¥100-300/天</span></div>
+                  <div className="flex justify-between"><span>门票</span><span className="font-medium">¥100-400/天</span></div>
                 </div>
               </div>
 

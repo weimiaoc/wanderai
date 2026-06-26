@@ -72,7 +72,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "西湖烟雨，龙井茶香，一座让时光慢下来的城市。",
     reasons: [],
-    estimatedCost: { transport: 300, accommodation: 600, food: 400, activities: 200, shopping: 300, total: 1800 },
+    estimatedCost: { transport: 1000, accommodation: 1900, food: 1000, activities: 425, shopping: 0, total: 5650 }
     bestSeason: "3-5月、9-11月",
     tripLength: { min: 1, ideal: 3, max: 7 },
     hiddenGems: [
@@ -88,7 +88,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "8D魔幻山城，火锅的故乡，轻轨穿楼而过。",
     reasons: [],
-    estimatedCost: { transport: 400, accommodation: 400, food: 400, activities: 200, shopping: 200, total: 1600 },
+    estimatedCost: { transport: 1150, accommodation: 1900, food: 1000, activities: 375, shopping: 0, total: 5800 }
     bestSeason: "3-5月、10-11月",
     tripLength: { min: 1, ideal: 3, max: 7 },
     hiddenGems: [
@@ -103,7 +103,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "美食天堂，慢生活之都，来了就不想走的城市。",
     reasons: [],
-    estimatedCost: { transport: 500, accommodation: 500, food: 500, activities: 200, shopping: 300, total: 2000 },
+    estimatedCost: { transport: 1150, accommodation: 1900, food: 1000, activities: 460, shopping: 0, total: 5900 }
     bestSeason: "3-6月、9-11月",
     tripLength: { min: 1, ideal: 3, max: 7 },
     hiddenGems: [
@@ -118,7 +118,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "十三朝古都，兵马俑守护的千年长安。",
     reasons: [],
-    estimatedCost: { transport: 500, accommodation: 500, food: 300, activities: 300, shopping: 300, total: 1900 },
+    estimatedCost: { transport: 1050, accommodation: 1900, food: 1000, activities: 550, shopping: 0, total: 5900 }
     bestSeason: "3-5月、9-11月",
     tripLength: { min: 1, ideal: 3, max: 7 },
     hiddenGems: [
@@ -133,7 +133,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "红墙黄瓦紫禁城，胡同深处的帝都烟火。",
     reasons: [],
-    estimatedCost: { transport: 400, accommodation: 700, food: 500, activities: 300, shopping: 500, total: 2400 },
+    estimatedCost: { transport: 1500, accommodation: 1900, food: 1000, activities: 475, shopping: 0, total: 6300 }
     bestSeason: "4-5月、9-10月",
     tripLength: { min: 1, ideal: 4, max: 7 },
     hiddenGems: [
@@ -148,7 +148,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "咖啡馆密度全国第一，从法租界到外滩，每个街区都有惊喜。",
     reasons: [],
-    estimatedCost: { transport: 400, accommodation: 800, food: 600, activities: 300, shopping: 500, total: 2600 },
+    estimatedCost: { transport: 1500, accommodation: 1900, food: 1000, activities: 675, shopping: 0, total: 6650 }
     bestSeason: "3-5月、10-11月",
     tripLength: { min: 1, ideal: 3, max: 7 },
     hiddenGems: [
@@ -163,7 +163,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "食在广州，早茶文化渗透到每个清晨。",
     reasons: [],
-    estimatedCost: { transport: 300, accommodation: 500, food: 500, activities: 200, shopping: 300, total: 1800 },
+    estimatedCost: { transport: 1300, accommodation: 1900, food: 1000, activities: 450, shopping: 0, total: 6100 }
     bestSeason: "10-12月、3-5月",
     tripLength: { min: 1, ideal: 3, max: 7 },
     hiddenGems: [
@@ -178,7 +178,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "年轻之城，山海连城，最美海岸线公园。",
     reasons: [],
-    estimatedCost: { transport: 300, accommodation: 600, food: 400, activities: 300, shopping: 400, total: 2000 },
+    estimatedCost: { transport: 1300, accommodation: 1900, food: 1000, activities: 415, shopping: 0, total: 6050 }
     bestSeason: "10-4月",
     tripLength: { min: 1, ideal: 2, max: 7 },
     hiddenGems: [
@@ -193,7 +193,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "园林甲天下，小桥流水，吴侬软语。",
     reasons: [],
-    estimatedCost: { transport: 200, accommodation: 500, food: 350, activities: 250, shopping: 300, total: 1600 },
+    estimatedCost: { transport: 850, accommodation: 1900, food: 1000, activities: 425, shopping: 0, total: 5450 }
     bestSeason: "3-5月、9-11月",
     tripLength: { min: 1, ideal: 2, max: 7 },
     hiddenGems: [
@@ -208,7 +208,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "六朝古都，梧桐大道，金陵烟雨。",
     reasons: [],
-    estimatedCost: { transport: 300, accommodation: 500, food: 350, activities: 250, shopping: 300, total: 1700 },
+    estimatedCost: { transport: 850, accommodation: 1900, food: 1000, activities: 425, shopping: 0, total: 5450 }
     bestSeason: "3-5月、10-11月",
     tripLength: { min: 1, ideal: 3, max: 7 },
     hiddenGems: [
@@ -223,7 +223,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "星城不夜天，茶颜悦色的快乐老家。",
     reasons: [],
-    estimatedCost: { transport: 300, accommodation: 400, food: 350, activities: 150, shopping: 200, total: 1400 },
+    estimatedCost: { transport: 850, accommodation: 1900, food: 1000, activities: 415, shopping: 0, total: 5450 }
     bestSeason: "3-5月、10-11月",
     tripLength: { min: 1, ideal: 2, max: 7 },
     hiddenGems: [
@@ -238,7 +238,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "红瓦绿树，碧海蓝天，啤酒泡沫里的浪漫。",
     reasons: [],
-    estimatedCost: { transport: 400, accommodation: 500, food: 400, activities: 200, shopping: 200, total: 1700 },
+    estimatedCost: { transport: 1050, accommodation: 1900, food: 1000, activities: 415, shopping: 0, total: 5750 }
     bestSeason: "5-10月",
     tripLength: { min: 1, ideal: 3, max: 7 },
     hiddenGems: [
@@ -253,7 +253,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "海上花园鼓浪屿，文艺到骨子里的鹭岛。",
     reasons: [],
-    estimatedCost: { transport: 400, accommodation: 500, food: 350, activities: 200, shopping: 300, total: 1750 },
+    estimatedCost: { transport: 1000, accommodation: 1900, food: 1000, activities: 425, shopping: 0, total: 5650 }
     bestSeason: "3-5月、10-12月",
     tripLength: { min: 1, ideal: 3, max: 7 },
     hiddenGems: [
@@ -268,7 +268,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "春城无处不飞花，四季如春的慵懒日光。",
     reasons: [],
-    estimatedCost: { transport: 600, accommodation: 400, food: 300, activities: 250, shopping: 200, total: 1750 },
+    estimatedCost: { transport: 1350, accommodation: 1900, food: 1000, activities: 450, shopping: 0, total: 6100 }
     bestSeason: "全年皆宜",
     tripLength: { min: 1, ideal: 3, max: 7 },
     hiddenGems: [
@@ -283,7 +283,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "苍山洱海，风花雪月，理想中的诗与远方。",
     reasons: [],
-    estimatedCost: { transport: 600, accommodation: 500, food: 300, activities: 200, shopping: 200, total: 1800 },
+    estimatedCost: { transport: 1350, accommodation: 1900, food: 1000, activities: 415, shopping: 0, total: 6050 }
     bestSeason: "3-5月、9-11月",
     tripLength: { min: 2, ideal: 4, max: 7 },
     hiddenGems: [
@@ -298,7 +298,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "一米阳光，纳西古城，玉龙雪山下的人间烟火。",
     reasons: [],
-    estimatedCost: { transport: 700, accommodation: 500, food: 350, activities: 300, shopping: 300, total: 2150 },
+    estimatedCost: { transport: 1500, accommodation: 1900, food: 1000, activities: 450, shopping: 0, total: 6300 }
     bestSeason: "4-10月",
     tripLength: { min: 2, ideal: 4, max: 7 },
     hiddenGems: [
@@ -313,7 +313,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "东方莫斯科，冰雪王国，面包石铺就的欧陆风情。",
     reasons: [],
-    estimatedCost: { transport: 600, accommodation: 400, food: 350, activities: 300, shopping: 200, total: 1850 },
+    estimatedCost: { transport: 1750, accommodation: 1900, food: 1000, activities: 450, shopping: 0, total: 6800 }
     bestSeason: "12-2月（冰雪）、6-8月（避暑）",
     tripLength: { min: 1, ideal: 3, max: 7 },
     hiddenGems: [
@@ -328,7 +328,7 @@ const destinations: Destination[] = [
     matchScore: 0,
     description: "东方夏威夷，椰风海韵，中国最南端的热带天堂。",
     reasons: [],
-    estimatedCost: { transport: 800, accommodation: 800, food: 500, activities: 400, shopping: 300, total: 2800 },
+    estimatedCost: { transport: 2750, accommodation: 1900, food: 1000, activities: 525, shopping: 0, total: 8400 }
     bestSeason: "10-4月",
     tripLength: { min: 2, ideal: 4, max: 7 },
     hiddenGems: [
@@ -499,15 +499,15 @@ export function optimizeRoute(
 // ============ Travel Styles & Demo ============
 
 export const travelStyles = [
-  { id: "classic" as TravelStyle, name: "经典打卡", icon: "Zap", description: "必去景点一网打尽，经典不留遗憾。", budget: "¥1000-5000", season: "全年皆宜", destinations: ["北京", "西安", "上海", "杭州"], gradient: "linear-gradient(135deg, #6366F1, #8B5CF6)" },
-  { id: "food" as TravelStyle, name: "美食探索", icon: "UtensilsCrossed", description: "从街头小吃到老字号，吃遍一座城。", budget: "¥500-3000", season: "全年皆宜", destinations: ["成都", "重庆", "长沙", "广州"], gradient: "linear-gradient(135deg, #EF4444, #F97316)" },
-  { id: "nature" as TravelStyle, name: "自然风光", icon: "TreePine", description: "在雪山湖泊间找回平静。", budget: "¥1500-6000", season: "5-10月", destinations: ["大理", "昆明", "三亚", "青岛"], gradient: "linear-gradient(135deg, #059669, #10B981)" },
-  { id: "culture" as TravelStyle, name: "历史文化", icon: "Landmark", description: "触摸千年时光，读懂一座城。", budget: "¥1000-5000", season: "全年皆宜", destinations: ["北京", "西安", "南京", "苏州"], gradient: "linear-gradient(135deg, #DC2626, #B45309)" },
-  { id: "family" as TravelStyle, name: "亲子家庭", icon: "Baby", description: "轻松不累，大人小孩都开心。", budget: "¥2000-8000", season: "寒暑假最佳", destinations: ["广州", "深圳", "厦门", "三亚"], gradient: "linear-gradient(135deg, #F59E0B, #EC4899)" },
+  { id: "classic" as TravelStyle, name: "经典打卡", icon: "Zap", description: "必去景点一网打尽，经典不留遗憾。", budget: "¥3,000-6,700", season: "全年皆宜", destinations: ["北京", "西安", "上海", "杭州"], gradient: "linear-gradient(135deg, #6366F1, #8B5CF6)" },
+  { id: "food" as TravelStyle, name: "美食探索", icon: "UtensilsCrossed", description: "从街头小吃到老字号，吃遍一座城。", budget: "¥3,100-7,400", season: "全年皆宜", destinations: ["成都", "重庆", "长沙", "广州"], gradient: "linear-gradient(135deg, #EF4444, #F97316)" },
+  { id: "nature" as TravelStyle, name: "自然风光", icon: "TreePine", description: "在雪山湖泊间找回平静。", budget: "¥3,000-7,100", season: "5-10月", destinations: ["大理", "昆明", "三亚", "青岛"], gradient: "linear-gradient(135deg, #059669, #10B981)" },
+  { id: "culture" as TravelStyle, name: "历史文化", icon: "Landmark", description: "触摸千年时光，读懂一座城。", budget: "¥2,900-5,900", season: "全年皆宜", destinations: ["北京", "西安", "南京", "苏州"], gradient: "linear-gradient(135deg, #DC2626, #B45309)" },
+  { id: "family" as TravelStyle, name: "亲子家庭", icon: "Baby", description: "轻松不累，大人小孩都开心。", budget: "¥3,200-7,800", season: "寒暑假最佳", destinations: ["广州", "深圳", "厦门", "三亚"], gradient: "linear-gradient(135deg, #F59E0B, #EC4899)" },
 ];
 
 export const demoPreset: TravelPreferences = {
-  departureCity: "上海", budget: 2000, days: 2, travelers: 1,
+  departureCity: "上海", budget: 5000, days: 2, travelers: 1,
   interests: ["咖啡馆", "摄影", "City Walk"], pace: "balanced",
   travelStyle: "classic",
 };

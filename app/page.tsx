@@ -12,6 +12,12 @@ import AnimatedSection from "./components/AnimatedSection";
 import PlannerInput from "./components/PlannerInput";
 import SafeImage from "./components/SafeImage";
 import { demoPreset, type TravelStyle } from "./lib/recommendation";
+import { calculateBudget } from "./lib/budget";
+
+function getBudgetRange(cityName: string): string {
+  const b = calculateBudget(cityName, 5, 1, "classic");
+  return `¥${b.perPerson[0].toLocaleString()}-${b.perPerson[1].toLocaleString()}`;
+}
 import {
   Sparkles,
   ArrowRight,
@@ -32,12 +38,12 @@ import {
 
 // 热门目的地推荐
 const popularDestinations = [
-  { name: "杭州", slug: "hangzhou", budget: "¥1500-2500", month: "3-5月", style: "City Walk · 咖啡馆", image: "https://picsum.photos/400/500?random=1", region: "华东" },
-  { name: "成都", slug: "chengdu", budget: "¥1800-3000", month: "3-6月", style: "美食 · 慢生活", image: "https://picsum.photos/400/500?random=2", region: "西南" },
-  { name: "大理", slug: "dali", budget: "¥1500-2500", month: "全年皆宜", style: "自然 · 摄影", image: "https://picsum.photos/400/500?random=3", region: "西南" },
-  { name: "上海", slug: "shanghai", budget: "¥2000-3500", month: "3-5月", style: "咖啡馆 · City Walk", image: "https://picsum.photos/400/500?random=4", region: "华东" },
-  { name: "西安", slug: "xian", budget: "¥1200-2000", month: "3-5月", style: "历史文化 · 美食", image: "https://picsum.photos/400/500?random=5", region: "西北" },
-  { name: "长沙", slug: "changsha", budget: "¥1000-1800", month: "10-11月", style: "美食 · 网红打卡", image: "https://picsum.photos/400/500?random=6", region: "华中" },
+  { name: "杭州", slug: "hangzhou", budget: getBudgetRange("杭州"), month: "3-5月", style: "City Walk · 咖啡馆", image: "https://picsum.photos/400/500?random=1", region: "华东" },
+  { name: "成都", slug: "chengdu", budget: getBudgetRange("成都"), month: "3-6月", style: "美食 · 慢生活", image: "https://picsum.photos/400/500?random=2", region: "西南" },
+  { name: "大理", slug: "dali", budget: getBudgetRange("大理"), month: "全年皆宜", style: "自然 · 摄影", image: "https://picsum.photos/400/500?random=3", region: "西南" },
+  { name: "上海", slug: "shanghai", budget: getBudgetRange("上海"), month: "3-5月", style: "咖啡馆 · City Walk", image: "https://picsum.photos/400/500?random=4", region: "华东" },
+  { name: "西安", slug: "xian", budget: getBudgetRange("西安"), month: "3-5月", style: "历史文化 · 美食", image: "https://picsum.photos/400/500?random=5", region: "西北" },
+  { name: "长沙", slug: "changsha", budget: getBudgetRange("长沙"), month: "10-11月", style: "美食 · 网红打卡", image: "https://picsum.photos/400/500?random=6", region: "华中" },
 ];
 
 const weeklyPicks = [
@@ -335,21 +341,21 @@ export default function HomePage() {
             {
               title: "杭州 · 2日City Walk",
               desc: "从小河直街到满觉陇，6个隐藏宝藏地点 + 3家独立咖啡馆，避开游客的人海",
-              stats: "预算¥800 | 步行+地铁 | 6个推荐地点",
+              stats: `预算${getBudgetRange("杭州")} | 步行+地铁 | 6个推荐地点`,
               image: "https://picsum.photos/600/400?random=13",
               slug: "hangzhou",
             },
             {
               title: "成都 · 3日慢生活",
               desc: "宽窄巷子→人民公园喝茶→太古里→火锅探店→大熊猫基地→九眼桥夜景",
-              stats: "预算¥1500 | 地铁+打车 | 8个推荐地点",
+              stats: `预算${getBudgetRange("成都")} | 地铁+打车 | 8个推荐地点`,
               image: "https://picsum.photos/600/400?random=14",
               slug: "chengdu",
             },
             {
               title: "大理 · 4日摄影之旅",
               desc: "环洱海骑行→喜洲古镇→双廊日落→寂照庵→沙溪古镇，每一帧都是壁纸",
-              stats: "预算¥2000 | 租车骑行 | 10个推荐地点",
+              stats: `预算${getBudgetRange("大理")} | 租车骑行 | 10个推荐地点`,
               image: "https://picsum.photos/600/400?random=15",
               slug: "dali",
             },
