@@ -149,6 +149,7 @@ function PlannerContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const resultsRef = useRef<HTMLDivElement>(null);
+  const tabBarRef = useRef<HTMLDivElement>(null);
 
   const [preferences, setPreferences] = useState<TravelPreferences>({ departureCity: "上海", budget: 3000, days: 5, travelers: 1, interests: [], pace: "balanced", travelStyle: "classic" });
   const [generated, setGenerated] = useState(false);
@@ -189,7 +190,7 @@ function PlannerContent() {
         setBudgetData(calculateBudget(recs[0].name, prefs.days, prefs.travelers, style, prefs.budget));
       }
       setGenerated(true); setLoading(false);
-      setTimeout(() => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 200);
+      setTimeout(() => tabBarRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 200);
     }, 1200);
   };
 
@@ -272,12 +273,21 @@ function PlannerContent() {
 
                   {selectedDest && budgetData && (
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-                      {/* Sticky Tab Bar */}
-                      <div className="sticky top-[88px] z-30 -mx-1 px-1 pt-2 pb-4">
-                        <div className="glass px-1 py-1 rounded-2xl flex gap-1 shadow-lg shadow-black/5">
+                      {/* Sticky Tab Bar — full-width dark */}
+                      <div ref={tabBarRef} className="sticky top-[88px] z-30 -mx-4 sm:-mx-6 mb-6">
+                        <div className="bg-slate-800 px-2 sm:px-6 py-3 flex gap-2 sm:gap-3 rounded-none sm:rounded-2xl shadow-xl shadow-slate-900/30">
                           {TABS.map((tab) => { const isActive = activeTab === tab.id, Icon = tab.icon; return (
-                            <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-sm font-medium transition-all ${isActive ? "bg-[#4F8EF7] text-white shadow-md shadow-[#4F8EF7]/25" : "text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-border)]"}`}>
-                              <Icon size={16} /><span className="hidden sm:inline">{tab.label}</span><span className="sm:hidden text-xs">{tab.label}</span>
+                            <button
+                              key={tab.id}
+                              onClick={() => setActiveTab(tab.id)}
+                              className={`flex-1 flex items-center justify-center gap-2 sm:gap-2.5 py-3 rounded-xl text-sm sm:text-lg font-bold transition-all duration-200 ${
+                                isActive
+                                  ? "bg-white text-slate-800 shadow-lg shadow-black/20 scale-[1.02]"
+                                  : "text-white/60 hover:text-white hover:bg-white/10"
+                              }`}
+                            >
+                              <Icon size={18} className="sm:w-5 sm:h-5" />
+                              <span>{tab.label}</span>
                             </button>
                           );})}
                         </div>
