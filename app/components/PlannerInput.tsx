@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useMemo } from "react";
 import {
   MapPin,
   Users,
@@ -13,8 +14,10 @@ import {
 } from "lucide-react";
 import InterestTags from "./InterestTags";
 import type { TravelStyle } from "../lib/recommendation";
+import { calculateBudget } from "../lib/budget";
 
 interface PlannerInputProps {
+  cityName: string;
   departureCity: string;
   setDepartureCity: (v: string) => void;
   budget: number;
@@ -63,6 +66,7 @@ const styleOptions: { id: TravelStyle; label: string; emoji: string }[] = [
 ];
 
 export default function PlannerInput({
+  cityName,
   departureCity,
   setDepartureCity,
   budget,
@@ -263,7 +267,7 @@ export default function PlannerInput({
       <motion.div variants={inputVariants} custom={3}>
         <label className="flex items-center gap-2 text-sm font-medium text-[var(--color-text-secondary)] mb-3">
           <Wallet size={16} className="text-[#7ED6C2]" />
-          预算范围
+          人均预算
           <span className="ml-auto text-lg font-bold gradient-text">
             ¥{budget.toLocaleString()}
           </span>
@@ -283,6 +287,14 @@ export default function PlannerInput({
             <span>¥10,000</span>
           </div>
         </div>
+        {(() => {
+          const r = calculateBudget(cityName, days, travelers, travelStyle, budget);
+          return (
+            <p className="mt-2 text-xs text-[var(--color-text-secondary)] bg-[var(--color-border)] rounded-lg p-2">
+              预估人均 <span className="font-semibold gradient-text">¥{r.perPerson[0].toLocaleString()} - ¥{r.perPerson[1].toLocaleString()}</span> · {days}天{travelers}人 · {(() => { const m: Record<string,string>={classic:"经典打卡",food:"美食探索",nature:"自然风光",culture:"历史文化",family:"亲子家庭"}; return m[travelStyle]||travelStyle; })()}风格
+            </p>
+          );
+        })()}
       </motion.div>
 
       {/* Interests */}

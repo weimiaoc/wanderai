@@ -1,12 +1,10 @@
 "use client";
 
-import { useMemo } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Heart, Star, Clock, DollarSign } from "lucide-react";
+import { MapPin, Heart, Star, Clock } from "lucide-react";
 import { Destination } from "../lib/recommendation";
 import { isFavorited, toggleFavorite } from "../lib/storage";
 import { useState, useEffect } from "react";
-import { calculateBudget } from "../lib/budget";
 import SafeImage from "./SafeImage";
 
 interface DestinationCardProps {
@@ -21,11 +19,6 @@ export default function DestinationCard({
   onClick,
 }: DestinationCardProps) {
   const [fav, setFav] = useState(false);
-
-  const budget = useMemo(
-    () => calculateBudget(destination.name, 5, 1, "classic"),
-    [destination.name]
-  );
 
   useEffect(() => {
     setFav(isFavorited(destination.id));
@@ -102,11 +95,7 @@ export default function DestinationCard({
         ))}
       </div>
 
-      <div className="flex items-center justify-between pt-3 border-t border-[var(--color-border)]">
-        <div className="flex items-center gap-1 text-sm font-semibold gradient-text">
-          <DollarSign size={14} />
-          ¥{budget.perPerson[0].toLocaleString()}-{budget.perPerson[1].toLocaleString()}
-        </div>
+      <div className="flex items-center justify-end pt-3 border-t border-[var(--color-border)]">
         <div className="flex items-center gap-3 text-xs text-[var(--color-text-secondary)]">
           <span className="flex items-center gap-1">
             <Clock size={12} />

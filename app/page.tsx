@@ -139,6 +139,7 @@ export default function HomePage() {
             transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
           >
             <PlannerInput
+              cityName={departureCity}
               departureCity={departureCity}
               setDepartureCity={setDepartureCity}
               budget={budget}
