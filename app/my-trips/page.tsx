@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "../components/Navbar";
 import AnimatedSection from "../components/AnimatedSection";
 import { getSavedTrips, deleteTrip, getFavorites, toggleFavorite, SavedTrip, FavoritedDestination } from "../lib/storage";
+import { destinations } from "../lib/recommendation";
 import {
   Heart,
   MapPin,
@@ -40,6 +41,11 @@ export default function MyTripsPage() {
     setTrips(getSavedTrips());
     setFavorites(getFavorites());
   }, []);
+
+  const getSlug = (cityName: string): string => {
+    const dest = destinations.find((d) => d.name === cityName);
+    return dest?.id || cityName;
+  };
 
   const handleDelete = (id: string) => {
     deleteTrip(id);
@@ -302,16 +308,13 @@ export default function MyTripsPage() {
                         ))}
                       </div>
 
-                      {/* Placeholder detail */}
+                      {/* View Detail */}
                       <div className="p-6 rounded-xl bg-[var(--color-border)] text-center">
-                        <p className="text-sm text-[var(--color-text-secondary)]">
-                          前往 AI 规划页面查看完整行程安排
-                        </p>
                         <Link
-                          href="/planner"
-                          className="inline-flex items-center gap-1 mt-2 text-sm text-[#4F8EF7] font-medium hover:underline"
+                          href={`/city/${getSlug(selectedTrip.destination)}`}
+                          className="btn-primary inline-flex items-center gap-2"
                         >
-                          查看详情 <ArrowRight size={14} />
+                          查看详情 <ArrowRight size={16} />
                         </Link>
                       </div>
                     </div>
