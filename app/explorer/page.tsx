@@ -23,6 +23,8 @@ import {
   ArrowRight,
   X,
   Check,
+  UtensilsCrossed,
+  Baby,
 } from "lucide-react";
 
 // 城市名到 slug 映射
@@ -52,6 +54,8 @@ const iconMap: Record<string, React.ComponentType<any>> = {
   Landmark,
   Waves,
   Building2,
+  UtensilsCrossed,
+  Baby,
 };
 
 export default function ExplorerPage() {
@@ -117,9 +121,7 @@ export default function ExplorerPage() {
                       {/* Icon */}
                       <div
                         className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4 shadow-lg"
-                        style={{
-                          background: `linear-gradient(135deg, ${style.gradient.split(",")[0].replace("linear-gradient(135deg, ", "")}, ${style.gradient.split(",")[1]?.trim() || ""})`,
-                        }}
+                        style={{ background: style.gradient }}
                       >
                         <IconComp size={26} className="text-white" />
                       </div>
