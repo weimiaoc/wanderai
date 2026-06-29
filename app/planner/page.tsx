@@ -264,7 +264,7 @@ function PlannerContent() {
                     <h3 className="text-sm font-medium text-[var(--color-text-secondary)] mb-3">为你推荐 {results.length} 个目的地</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {results.map((dest, i) => (
-                        <div key={dest.id} onClick={() => { setSelectedDest(dest); setDailyPlan(generateDailyPlan(dest, preferences)); setBudgetData(calculateBudget(dest.name, preferences.days, preferences.travelers, travelStyle, preferences.budget)); setActiveTab("overview"); }} className={selectedDest?.id === dest.id ? "ring-2 ring-[#4F8EF7] rounded-[20px]" : ""}>
+                        <div key={dest.id} onClick={() => router.push(`/city/${dest.id}`)} className="cursor-pointer">
                           <DestinationCard destination={dest} index={i} />
                         </div>
                       ))}

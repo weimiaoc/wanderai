@@ -300,7 +300,7 @@ export default function DestinationClient({ slug, dest, extras }: { slug: string
                   告诉 AI 你的天数、兴趣和预算，5 秒内生成专属{dest.name}行程。
                 </p>
                 <Link
-                  href={`/planner?city=${slug}`}
+                  href={`/city/${slug}`}
                   className="inline-flex items-center gap-1.5 text-xs font-medium px-4 py-2 rounded-xl bg-gradient-to-r from-[#4F8EF7] to-[#8B5CF6] text-white hover:opacity-90 transition-opacity"
                 >
                   <Sparkles size={14} /> 立即规划 {dest.name} 行程
